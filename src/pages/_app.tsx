@@ -16,4 +16,3 @@ const GlobalStyle = createGlobalStyle`
     font-family: Helvetica;
   }
 `;
-
