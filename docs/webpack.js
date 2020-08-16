@@ -2,9 +2,6 @@
 const path = require('path');
 const docs = path.resolve(__dirname);
 
-// eslint-disable-next-line
-const aliases = require('../aliases');
-
 const outputConfig = {
     path: `${docs}/styleguide`,
     filename: 'build/bundle.js',
@@ -14,17 +11,21 @@ const rulesConfig = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.([jt])sx$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['@babel/preset-react', ['next/babel', { 'preset-env': { modules: 'commonjs' } }]],
+                    presets: [
+                        '@babel/preset-react', 
+                        ['next/babel', { 'preset-env': { modules: 'commonjs' } }],
+                        '@babel/preset-typescript'
+                    ],
                 },
             },
         ],
     },
     resolve: {
-        alias: aliases,
+        extensions: ['.ts', '.tsx', '.js', '.json']
     },
 };
 

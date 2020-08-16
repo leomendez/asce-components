@@ -1,8 +1,5 @@
 // eslint-disable-next-line
 const path = require('path');
-
-const docs = path.resolve(__dirname);
-const root = docs.replace('/docs', '');
 // eslint-disable-next-line
 const customWebpack = require('./webpack');
 
@@ -10,7 +7,7 @@ module.exports = {
     sections: [
         {
             name: 'Next + styleguidist',
-            components: `${root}/components/*.tsx`
+            components: '../components/*.tsx'
         }
     ],
     configureServer(app) {
