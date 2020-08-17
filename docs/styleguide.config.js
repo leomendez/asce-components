@@ -6,8 +6,8 @@ const customWebpack = require('./webpack');
 module.exports = {
     sections: [
         {
-            name: 'Next + styleguidist',
-            components: '../components/*.tsx'
+            name: 'Asce Components',
+            components: '../src/components/*.tsx'
         }
     ],
     configureServer(app) {
