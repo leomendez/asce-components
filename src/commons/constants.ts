@@ -1,13 +1,11 @@
+import { davysGrey, cultured, lightSlateGrey, tartOrange } from './colors';
+
 export const THEME = {
     colors: {
-        //dark
-        chromeYellow: '#FAA916',
-        white: '#FFFFFF',
-        davysGrey: '#525252',
-        lightCoral: '#FF7477',
-        pastelPink: '#E69597',
-        //light
-        cultured: '#FAF9F9',
+        dark: davysGrey,
+        light: cultured,
+        primary: tartOrange,
+        secondary: lightSlateGrey
     },
     fonts: ['sans-serif', 'Roboto'],
     fontSizes: {
@@ -15,4 +13,4 @@ export const THEME = {
         medium: '2em',
         large: '3em',
     },
-}; 
+};

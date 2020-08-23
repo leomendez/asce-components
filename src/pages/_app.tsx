@@ -1,6 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
+import { davysGrey } from '../commons/colors';
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (
@@ -12,7 +13,12 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 }
 
 const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    background-color: ${davysGrey};
+  }
+
   * {
-    font-family: Helvetica;
+    box-sizing: border-box;
   }
 `;

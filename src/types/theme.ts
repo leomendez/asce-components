@@ -1,6 +1,9 @@
 export type Theme = {
     colors: {
-        [key: string]: string
+        dark: string;
+        light: string;
+        primary: string;
+        secondary: string;
     };
     fonts: string[],
     fontSizes: {

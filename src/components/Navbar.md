@@ -1,17 +1,12 @@
 ```jsx
 import styled from 'styled-components';
+import NavItem from './NavItem';
 
-const Items = styled.div`
-    padding: 0 5px;
-    a {
-        padding: 0 5px;
-    }
-`;
-
-const items = <Items>
-    <a href="#">Home</a>
-    <a href="#">Somewhere else</a>
-</Items>;
+const items = <>
+    <NavItem>Home</NavItem>
+    <NavItem>About</NavItem>
+    <NavItem>Contact</NavItem>
+</>;
 
 <Navbar title="My App" items={items} />
 ```

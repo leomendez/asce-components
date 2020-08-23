@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import { Theme } from '../types/theme';
 import { THEME } from '../commons/constants';
 
-interface Props {
-    items?: JSX.Element;
-    title: JSX.Element | string;
+export type NavbarProps = {
+    items?: React.ReactNode;
+    title: React.ReactNode | string;
     theme?: Theme;
 }
 
-export default function Navbar({ items, title, theme = THEME }: Props): JSX.Element {
+export default function Navbar({ items, title, theme = THEME }: NavbarProps): JSX.Element {
     return (
         <>
             <Nav theme={theme}>
@@ -25,14 +25,14 @@ export default function Navbar({ items, title, theme = THEME }: Props): JSX.Elem
 }
 
 type StyleProps = {
-    theme: Theme;
+    theme?: Theme;
 }
 
 const Nav = styled.nav<StyleProps>`
-    background-color: ${({ theme }) => theme.colors.davysGrey };
+    background-color: ${({ theme }) => theme.colors.dark };
     font-family: ${({ theme }) => theme.fonts[0] };
     color: white;
-    padding: 15px;
+    padding: 15px 80px;
     display: flex;
     justify-content: space-between;
     
@@ -44,18 +44,15 @@ const Title = styled.div<StyleProps>`
         color: white;
         text-decoration: none;
         :hover {
-            color: ${({ theme }) => theme.colors.flame};
+            color: ${({ theme }) => theme.colors.primary};
         }
     }
 `;
 
-const Items = styled.div<StyleProps>`
-    a {
-        color: white;
-        font-weight: 700;
-        text-decoration: none;
-        :hover {
-            color: ${({ theme }) => theme.colors.flame};
-        }
-    }
+const Items = styled.ul<StyleProps>`
+    margin: 0;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
 `;
