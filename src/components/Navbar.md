@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import NavItem from './NavItem';
 
 const items = <>
-    <NavItem><a href="#">Home</a></NavItem>
-    <NavItem><a href="#">About</a></NavItem>
-    <NavItem><a href="#">Contact</a></NavItem>
+    <NavItem>Home</NavItem>
+    <NavItem>About</NavItem>
+    <NavItem>Contact</NavItem>
 </>;
 
 <Navbar title="My App" items={items} />
