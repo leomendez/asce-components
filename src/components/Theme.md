@@ -3,7 +3,11 @@ import styled from "styled-components";
 
 const Container = styled.div`
     width: 100%;
-    font-family: ${props => props.theme.fonts[0]};
+    font-family: ${({ theme }) => theme.fonts[0]};
+    color: ${({ theme }) => theme.colors.dark};
+    * {
+        box-sizing: border-box;
+    }
 `;
 
 const Title = styled.div`
@@ -12,15 +16,38 @@ const Title = styled.div`
     text-align: center;
     width: 100%;
     font-weight: 700;
-    font-size: ${props => props.theme.fontSizes.medium};
+    font-size: ${({ theme }) => theme.fontSizes.medium};
 `;
 
 const Colors = styled.div`
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    color: white;
+    color: ${({ theme }) => theme.colors.light};
+    padding: 20px;
+    div {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-weight: 700;
+    }
+`;
+
+const Dark = styled.div`
+    background-color: ${({ theme }) => theme.colors.dark};
+`;
+
+const Light = styled.div`
+    background-color: ${({ theme }) => theme.colors.light};
+    color: ${({ theme }) => theme.colors.dark};
+`;
+
+const Primary = styled.div`
+    background-color: ${({ theme }) => theme.colors.primary};
+`;
+
+const Secondary = styled.div`
+    background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const FontSizes = styled.div`
@@ -34,51 +61,13 @@ const FontSizes = styled.div`
         text-align: center;
     }
     div:nth-child(1) {
-        font-size: ${props => props.theme.fontSizes.small};
+        font-size: ${({ theme }) => theme.fontSizes.small};
     }
     div:nth-child(2) {
-        font-size: ${props => props.theme.fontSizes.medium};
+        font-size: ${({ theme }) => theme.fontSizes.medium};
     }
     div:nth-child(3) {
-        font-size: ${props => props.theme.fontSizes.large};
-    }
-`;
-
-const FirstRow = styled.div`
-    display: flex;
-     div {
-        width: 100%;
-        padding: 5px;
-        text-align: center;
-    }
-    div:nth-child(1) {
-        background-color: ${props => props.theme.colors.chromeYellow};
-    }
-    div:nth-child(2) {
-        color: black;
-        background-color: ${props => props.theme.colors.white};
-    }
-    div:nth-child(3) {
-        background-color: ${props => props.theme.colors.davysGrey};
-    }
-    div:nth-child(4) {
-        background-color: ${props => props.theme.colors.lightCoral};
-    }
-    div:nth-child(5) {
-        background-color: ${props => props.theme.colors.pastelPink};
-    }
-`;
-
-const SecondRow = styled.div`
-    display: flex;
-     div {
-        width: 100%;
-        padding: 5px;
-        text-align: center;
-    }
-    div:nth-child(1) {
-        color: black;
-        background-color: ${props => props.theme.colors.cultured};
+        font-size: ${({ theme }) => theme.fontSizes.large};
     }
 `;
 
@@ -86,16 +75,10 @@ const SecondRow = styled.div`
     <Container>
         <Title>Colors</Title>
         <Colors>
-            <FirstRow>
-                <div>chromeYellow</div>
-                <div>white</div>
-                <div>davysGrey</div>
-                <div>lightCoral</div>
-                <div>pastelPink</div>
-            </FirstRow>
-            <SecondRow>
-                <div>cultured</div>
-            </SecondRow>
+            <Dark>Dark</Dark>
+            <Light>Light</Light>
+            <Primary>Primary</Primary>
+            <Secondary>Secondary</Secondary>
         </Colors>
         <Title>Font Sizes</Title>
         <FontSizes>

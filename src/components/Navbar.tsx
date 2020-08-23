@@ -25,37 +25,35 @@ export default function Navbar({ items, title, theme = THEME }: Props): JSX.Elem
 }
 
 type StyleProps = {
-    theme: Theme;
+    theme?: Theme;
 }
 
 const Nav = styled.nav<StyleProps>`
-    background-color: ${({ theme }) => theme.colors.davysGrey };
+    background-color: ${({ theme }) => theme.colors.dark };
     font-family: ${({ theme }) => theme.fonts[0] };
     color: white;
-    padding: 15px;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     
 `;
 
 const Title = styled.div<StyleProps>`
+    padding: 0 30px;
     font-weight: 700;
     a {
         color: white;
         text-decoration: none;
         :hover {
-            color: ${({ theme }) => theme.colors.flame};
+            color: ${({ theme }) => theme.colors.primary};
         }
     }
 `;
 
-const Items = styled.div<StyleProps>`
-    a {
-        color: white;
-        font-weight: 700;
-        text-decoration: none;
-        :hover {
-            color: ${({ theme }) => theme.colors.flame};
-        }
-    }
+const Items = styled.ul<StyleProps>`
+    margin: 0;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
 `;

@@ -8,6 +8,7 @@ module.exports = {
         {
             name: 'Asce Components',
             components: './src/components/*.tsx',
+            ignore: './src/components/NavItem.tsx',
         },
     ],
     configureServer(app) {
