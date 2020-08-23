@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
         await app.prepare();
         const server = express();
         server.get('/build/:id', (req: Request, res: Response) => {
-            const file = path.join(__dirname, `../docs/styleguide/build/${req.params.id}`);
+            const file = path.join(__dirname, `../styleguide/build/${req.params.id}`);
             res.status(200).sendFile(file);
         });
         server.all('*', (req: Request, res: Response) => {

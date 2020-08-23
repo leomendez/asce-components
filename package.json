@@ -10,7 +10,9 @@
     "build:server": "tsc --project tsconfig.server.json",
     "build:next": "next build",
     "build": "npm run build:next && npm run build:server",
-    "start": "NODE_ENV=production node dist/index.js"
+    "start": "NODE_ENV=production node dist/index.js",
+    "styleguide:dev": "npx styleguidist server --config styleguide.config.js --open",
+    "styleguide:build": "npx styleguidist build"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -19,6 +21,10 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@babel/runtime-corejs2": "^7.11.2",
     "@testing-library/jest-dom": "^5.11.3",
     "@testing-library/react": "^10.4.8",
@@ -32,9 +38,11 @@
     "@types/testing-library__react": "^10.2.0",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
+    "babel-loader": "^8.1.0",
     "eslint": "^7.2.0",
     "eslint-plugin-react": "^7.20.6",
     "jest": "^26.4.0",
+    "react-styleguidist": "^11.0.8",
     "styled-components": "^5.1.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.8.3",

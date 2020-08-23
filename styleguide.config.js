@@ -7,7 +7,7 @@ module.exports = {
     sections: [
         {
             name: 'Asce Components',
-            components: '../src/components/*.tsx',
+            components: './src/components/*.tsx',
         },
     ],
     configureServer(app) {
