@@ -18,14 +18,15 @@ const rulesConfig = {
                     presets: [
                         '@babel/preset-react', 
                         ['next/babel', { 'preset-env': { modules: 'commonjs' } }],
-                        '@babel/preset-typescript'
+                        '@babel/preset-typescript',
                     ],
                 },
             },
         ],
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.json']
+        extensions: ['.ts', '.tsx', '.js', '.json'],
+        alias: { react: path.resolve('../node_modules/react') },
     },
 };
 
