@@ -19,6 +19,7 @@
       "no-console": "warn",
       "indent": ["error", 4],
       "quotes": ["warn", "single"],
-      "semi": ["error", "always"]
+      "semi": ["error", "always"],
+      "comma-dangle": ["warn", "always-multiline"]
     }
 }
