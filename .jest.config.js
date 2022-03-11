@@ -4,11 +4,13 @@ module.exports = {
     transform: {
         '^.+\\.(ts|tsx)$': 'ts-jest'
     },
-    testmatch: ['**/test/**/*.(ts|tsx)'],
-    testPathIgnorePattern: ['./.next', './node_modules/'],
+    testMatch: ['**/test/**/*.(ts|tsx)'],
+    testPathIgnorePatterns: ['./.next', './node_modules/'],
     globals: {
         'ts-jest': {
-            tsConfig: 'tsconfig.jest.json'
+            tsConfig: 'tsconfig.jest.json',
+            isolateModules: true
         }
-    }
+    },
+    testEnvironment: "jsdom"
 };
