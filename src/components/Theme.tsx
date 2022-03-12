@@ -9,7 +9,7 @@ export type ThemeProps = {
 }
 
 export default function Theme({ children, theme = THEME }: ThemeProps): JSX.Element {
-    return (
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  );
 } 

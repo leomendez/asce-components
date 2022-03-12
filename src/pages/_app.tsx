@@ -4,12 +4,12 @@ import { createGlobalStyle } from 'styled-components';
 import { davysGrey } from '../commons/colors';
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-    return (
-        <>
-            <GlobalStyle />
-            <Component {...pageProps} />
-        </>
-    );
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 const GlobalStyle = createGlobalStyle`
