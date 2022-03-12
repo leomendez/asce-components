@@ -10,11 +10,11 @@ export type NavItemProps = {
 }
 
 export default function NavItem({ theme = THEME, children, onClick }: NavItemProps): JSX.Element {
-    return (
-        <Item theme={theme} onClick={onClick}>
-            {children}
-        </Item>
-    );
+  return (
+    <Item theme={theme} onClick={onClick}>
+      {children}
+    </Item>
+  );
 }
 
 const Item = styled.li<NavItemProps>`

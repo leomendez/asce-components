@@ -10,18 +10,18 @@ export type NavbarProps = {
 }
 
 export default function Navbar({ items, title, theme = THEME }: NavbarProps): JSX.Element {
-    return (
-        <>
-            <Nav theme={theme}>
-                <Title theme={theme}>
-                    {title}
-                </Title>
-                <Items theme={theme}>
-                    {items}
-                </Items>
-            </Nav>
-        </>
-    );
+  return (
+    <>
+      <Nav theme={theme}>
+        <Title theme={theme}>
+          {title}
+        </Title>
+        <Items theme={theme}>
+          {items}
+        </Items>
+      </Nav>
+    </>
+  );
 }
 
 type StyleProps = {
